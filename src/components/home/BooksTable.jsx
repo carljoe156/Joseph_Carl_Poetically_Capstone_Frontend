@@ -5,6 +5,10 @@ import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
 import { Link } from "react-router";
 
 const BooksTable = ({ books }) => {
+  if (!books || books.length === 0) {
+    return <p>No books available.</p>; // Show a message if books are empty or undefined
+  }
+
   return (
     <>
       <table className="table-auto w-full">
@@ -31,7 +35,7 @@ const BooksTable = ({ books }) => {
             <th className="px-4 py-2 border border-slate-400 rounded-full max-md:hidden">
               Publisher
             </th>
-            <th className="px-4 py-2 border border-slate-400 rounded-full ">
+            <th className="px-4 py-2 border border-slate-400 rounded-full">
               EDIT
             </th>
           </tr>
