@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import BooksCard from "../components/home/BooksCard";
+import BooksTable from "../components/home/BooksTable";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
