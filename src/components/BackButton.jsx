@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { BsArrowLeft } from "react-icons/bs";
 
 const BackButton = ({ destination = "/" }) => {
