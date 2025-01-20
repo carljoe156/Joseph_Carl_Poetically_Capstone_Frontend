@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
+import Spinner from "../components/Spinner";
 import BooksCard from "../components/home/BooksCard";
 import BooksTable from "../components/home/BooksTable";
 
@@ -66,13 +67,13 @@ const Home = () => {
         </button>
       </div>
 
-      {/* {loading ? (
+      {loading ? (
         <Spinner />
       ) : showType === "card" ? (
         <BooksCard books={books} />
       ) : (
         <BooksTable books={books} />
-      )} */}
+      )}
     </div>
   );
 };

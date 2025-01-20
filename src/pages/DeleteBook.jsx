@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 import axios from "axios";
 import { SnackbarProvider, useSnackbar } from "notistack";
-
+import Spinner from "../components/Spinner";
+import BackButton from "../components/BackButton";
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
