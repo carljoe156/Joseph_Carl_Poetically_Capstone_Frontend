@@ -1,11 +1,16 @@
+import React from "react";
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1> Welcome to P </h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
