@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router";
 import { SnackbarProvider, useSnackbar } from "notistack";
 import Spinner from "../components/Spinner";
 import BackButton from "../components/BackButton";
-import Layout from "../components/Layout/Layout"; // Import Layout
+import Layout from "../components/Layout/Layout";
 
 const CreateBook = () => {
   const [title, setTitle] = useState("");
