@@ -2,6 +2,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { PiBookOpenTextLight } from "react-icons/pi";
 import { BiUserCircle } from "react-icons/bi";
 
+// Our Book Modal with quotes and Reminder
 const BookModal = ({ book, onClose }) => {
   return (
     <div
@@ -25,17 +26,23 @@ const BookModal = ({ book, onClose }) => {
           <h2 className="my-1">{book.title}</h2>
         </div>
         <div className="flex justify-start items-center gap-x-2">
-          <BiUserCircle className="text-red-300 text-2xl" />
+          <BiUserCircle className="text-red-400 text-2xl" />
           <h2 className="my-1">{book.author}</h2>
         </div>
-        <p className="mt-4"> Click here to See More!</p>
+        <p className="mt-4"> </p>
         <p className="my-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
-          voluptatum sint. Nisi impedit libero eveniet cum vitae qui expedita
-          necessitatibus assumenda laboriosam, facilis iste cumque a pariatur
-          nesciunt cupiditate voluptas? Quis atque earum voluptate dolor nisi
-          dolorum est? Deserunt placeat cumque quo dicta architecto, dolore
-          vitae voluptate sequi repellat!
+          <p>
+            "The only thing you absolutely have to know is the location of the
+            library." – Albert Einstein
+          </p>
+          &nbsp;
+          <p>
+            <strong>
+              Please remember to be kind and thoughtful to other when submitting
+              book recommendations.
+            </strong>
+          </p>
+          &nbsp;
         </p>
       </div>
     </div>
