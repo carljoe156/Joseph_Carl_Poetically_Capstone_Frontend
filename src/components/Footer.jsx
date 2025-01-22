@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 fixed bottom-0 left-0 w-full">
+    <footer className="footer bg-gradient-to-r from-gray-100 via-sky-100 to-gray-100 relative bottom-0 left-0 w-full">
       <div className="footer-container max-w-screen-xl px-4 py-4 mx-auto sm:px-6 lg:px-8 flex justify-between items-center text-sm text-gray-600">
         {/* Our Left Section */}
         <div className="footer-left">
