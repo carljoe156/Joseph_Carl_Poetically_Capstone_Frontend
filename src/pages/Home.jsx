@@ -10,7 +10,6 @@ const Home = () => {
   const [category, setCategory] = useState("fiction");
   const booksPerPage = 20;
 
-  // I predfined some categories for our filter function
   const categories = [
     "art",
     "biography",
@@ -67,15 +66,29 @@ const Home = () => {
     setPage(newPage);
   };
 
-  if (loading && page === 1) return <p>Loading...</p>;
-
   return (
     <div className="p-4">
+      <div className="relative mb-6">
+        <img
+          className="object-cover w-full h-60 rounded-lg"
+          src="Public/Cover-Page.jpg"
+          alt="Embrace the Blank Page"
+          aria-hidden="true"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 squared-lg">
+          <h1
+            className="text-4xl font-bold font-aria text-white"
+            aria-label="Literary Registry"
+          >
+            Welcome to Poetically
+          </h1>
+        </div>
+      </div>
+
       <h1 className="text-3xl my-4" aria-label="Discover Books">
         Discover Books
       </h1>
 
-      {/* Our  Category Dropdown */}
       <label htmlFor="category" className="sr-only">
         Select book category
       </label>
@@ -93,7 +106,6 @@ const Home = () => {
         ))}
       </select>
 
-      {/* Book Listings */}
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         role="list"
@@ -137,7 +149,6 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Our Pagination */}
       <div
         className="flex justify-center mt-6"
         role="navigation"
