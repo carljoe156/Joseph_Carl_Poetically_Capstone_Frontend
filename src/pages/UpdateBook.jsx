@@ -22,7 +22,10 @@ const UpdateBook = () => {
     const fetchBook = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api/v1/book/${id}`);
+        const res = await axios.get(
+          `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/book/${id}`
+        );
+        // const res = await axios.get(`http://localhost:5000/api/v1/book/${id}`);
         const { title, genre, author, year, pages, publisher } = res.data.data;
         setTitle(title);
         setGenre(genre);
@@ -49,7 +52,9 @@ const UpdateBook = () => {
     setLoading(true);
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/v1//update/${id}`,
+        `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/update/${id}`,
+        //   const res = await axios.put(
+        //     `http://localhost:5000/api/v1//update/${id}`,
         {
           title,
           genre,

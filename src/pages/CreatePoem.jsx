@@ -4,15 +4,15 @@ import { Link, useNavigate } from "react-router";
 import { SnackbarProvider, useSnackbar } from "notistack";
 import Spinner from "../components/Spinner";
 import BackButton from "../components/BackButton";
-import Layout from "../components/Layout/Layout"; // Import Layout
+import Layout from "../components/Layout/Layout";
 
 const CreatePoem = () => {
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState("");
   const [author, setAuthor] = useState("");
   const [publishYear, setPublishYear] = useState("");
-  const [lines, setLines] = useState(""); // Renamed from `pages` to `lines`
-  const [publisher, setPublisher] = useState(""); // Optional for poems
+  const [lines, setLines] = useState("");
+  const [publisher, setPublisher] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
@@ -21,14 +21,18 @@ const CreatePoem = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/v1/poems/", {
-        title,
-        genre,
-        author,
-        publishYear,
-        lines,
-        publisher,
-      });
+      const res = await axios.post(
+        "https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/poems/",
+        {
+          //   const res = await axios.post("http://localhost:5000/api/v1/poems/", {
+          title,
+          genre,
+          author,
+          publishYear,
+          lines,
+          publisher,
+        }
+      );
       enqueueSnackbar("Poem created successfully", { variant: "success" });
       navigate("/poemlist"); // Navigate to the poem list page
     } catch (error) {

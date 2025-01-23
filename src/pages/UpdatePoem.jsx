@@ -10,7 +10,7 @@ const UpdatePoem = () => {
   const [genre, setGenre] = useState("");
   const [author, setAuthor] = useState("");
   const [year, setYear] = useState("");
-  const [content, setContent] = useState(""); // Changes pages to content
+  const [content, setContent] = useState("");
   const [publisher, setPublisher] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -21,7 +21,10 @@ const UpdatePoem = () => {
     const fetchPoem = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api/v1/poems/${id}`);
+        const res = await axios.get(
+          `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/poems/${id}`
+        );
+        // const res = await axios.get(`http://localhost:5000/api/v1/poems/${id}`); // our local webserver
         const { title, genre, author, year, content, publisher } = res.data;
         setTitle(title);
         setGenre(genre);
@@ -47,14 +50,18 @@ const UpdatePoem = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/v1/poems/${id}`, {
-        title,
-        genre,
-        author,
-        year,
-        content,
-        publisher,
-      });
+      await axios.put(
+        `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/poems/${id}`,
+        {
+          //   await axios.put(`http://localhost:5000/api/v1/poems/${id}`, {
+          title,
+          genre,
+          author,
+          year,
+          content,
+          publisher,
+        }
+      );
       navigate("/"); // Redirect to home page or list of poems
       enqueueSnackbar("Poem updated successfully", { variant: "success" });
     } catch (error) {

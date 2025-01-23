@@ -12,7 +12,10 @@ const ShowPoem = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5000/api/v1/poems/${id}`)
+      .get(
+        `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/poems/${id}`
+      )
+      //   .get(`http://localhost:5000/api/v1/poems/${id}`)
       .then((resp) => {
         setPoem(resp.data);
         setLoading(false);

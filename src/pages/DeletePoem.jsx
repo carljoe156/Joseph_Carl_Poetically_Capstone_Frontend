@@ -15,7 +15,10 @@ const DeletePoem = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/api/v1/poems/delete/${id}`);
+      await axios.delete(
+        `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/poems/delete/${id}`
+      );
+      //   await axios.delete(`http://localhost:5000/api/v1/poems/delete/${id}`);
       enqueueSnackbar("Poem deleted successfully", { variant: "success" });
       navigate("/poemlist"); // After deletion, navigate to the Poem list page
     } catch (error) {

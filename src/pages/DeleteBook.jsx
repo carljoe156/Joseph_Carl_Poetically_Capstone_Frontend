@@ -17,7 +17,8 @@ const DeleteBook = () => {
     setLoading(true);
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/v1/delete/${id}`
+        `https://joseph-carl-poetically-capstone-backend.onrender.com/api/v1/delete/${id}`
+        // `http://localhost:5000/api/v1/delete/${id}`// our local web server
       );
       enqueueSnackbar("Book deleted successfully", { variant: "success" });
       navigate("/booklist"); // After deletion,  we navigate to Book list page

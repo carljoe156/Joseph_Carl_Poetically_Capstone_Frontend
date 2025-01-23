@@ -12,12 +12,14 @@ const BookList = () => {
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("card");
   const LOCAL_URL = "http://localhost:5000";
+  const DEPLOY_URL =
+    "https://joseph-carl-poetically-capstone-backend.onrender.com";
 
   useEffect(() => {
     const fetchBooks = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`${LOCAL_URL}/api/v1/allbooks`, {
+        const res = await axios.get(`${DEPLOY_URL}/api/v1/allbooks`, {
           withCredentials: true,
         });
         setBooks(res.data.data);
