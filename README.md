@@ -1,4 +1,8 @@
-# Poetically Book Website Application
+# Poetically Book Website Application- Frontend
+
+## Live Deployed Link - [Poetically ](https://)
+
+### BACKEND GitHub Repository - (https://github.com/carljoe156/Joseph_Carl_Poetically_Capstone_Backend.git)
 
 ## Overview
 
@@ -47,16 +51,8 @@ This application is a MERN (MongoDB, Express, React, Node.js) stack project desi
 - **Tailwind CSS**: For styling the application
 - **React-Icons**: For rendering react styles.
 
-### Backend
-
-- **Node.js**: Server-side runtime environment.
-- **Express.js**: Web framework for building RESTful APIs.
-- **MongoDB**: NoSQL database for storing data.
-- **Mongoose**: ODM library for MongoDB.
-
 ### Development Tools
 
-- **Postman**: For testing API endpoints.
 - **ESLint**: For code quality and linting.
 - **Prettier**: For consistent code formatting.
 
@@ -88,24 +84,21 @@ src/
 |-- App.jsx
 |-- App.css
 |-- index.js
+|---main.jsx
 ```
 
-## API Endpoints HTTP Methods/CRUD Methods
+## API Endpoints
 
-### Books
+### Google Books API Endpoint
 
-- `GET /api/v1/books`: Fetch all books
-- `GET /api/v1/book/:id`: Fetch details of a specific book.
-- `POST /api/v1/books`: Add a new book.
-- `PUT /api/v1/book/:id`: Update book details.
-- `DELETE /api/v1/book/:id`: Remove a book.
+- For finding and categorizing of the Google Books API
+  `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&startIndex=$`
 
 ## Setup Instructions
 
 ### Prerequisites
 
-- Node.js
-- MongoDB
+- React
 
 ### Installation
 
@@ -124,17 +117,12 @@ src/
 
 ### Running the Application
 
-1. Start the backend server:
-   ```bash
-   nodemon index.js
-   ```
-2. Start the frontend application:
+1. Start the frontend application:
    ```bash
    npm run dev
    ```
-3. Open the application in your browser at:
+2. Open the application in your browser at:
    - Frontend: `http://localhost:5173`
-   - Backend: `http://localhost:5000`
 
 ## Future Enhancements
 
@@ -142,7 +130,3 @@ src/
 - Implementation of third-party libraries and APIs.
 - User accounts and administrative services for personalized experiences.
 - Advanced book recommendation engine with AI-driven insights.
-
-## License
-
-This project is licensed under the MIT License.
